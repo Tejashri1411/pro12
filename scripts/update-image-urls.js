@@ -1,6 +1,6 @@
 // Direct access to environment variables
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://icqoczbcbzinlmjtaxkk.supabase.co';
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImljcW9jemJjYnppbmxtanRheGtrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NjcxMzIzNywiZXhwIjoyMDYyMjg5MjM3fQ.4dA9nX_uU_zdeuisycp29I2Z22-Ufi-bR_ujox8YSws';
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://qcptobovhxpodjdeacoo.supabase.co';
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcHRvYm92aHhwb2RqZGVhY29vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0Njc4Mzk0MywiZXhwIjoyMDYyMzU5OTQzfQ.wmHqGSMZ3iFa9VPuRv_1B4Z6x7WzC3Qwv_lZQGL4a1k';
 
 // Import Supabase client
 const { createClient } = require('@supabase/supabase-js');
@@ -41,7 +41,7 @@ async function updateImageUrls() {
     if (menu.background_image_url && menu.background_image_url.includes('localhost')) {
       const newUrl = menu.background_image_url.replace(
         'http://localhost:34321',
-        'https://icqoczbcbzinlmjtaxkk.supabase.co'
+        'https://qcptobovhxpodjdeacoo.supabase.co'
       );
       
       console.log(`Updating menu ${menu.id} background image:`);
@@ -77,7 +77,7 @@ async function updateImageUrls() {
     if (menu.logo_image_url && menu.logo_image_url.includes('localhost')) {
       const newUrl = menu.logo_image_url.replace(
         'http://localhost:34321',
-        'https://icqoczbcbzinlmjtaxkk.supabase.co'
+        'https://qcptobovhxpodjdeacoo.supabase.co'
       );
       
       console.log(`Updating menu ${menu.id} logo:`);
@@ -113,7 +113,7 @@ async function updateImageUrls() {
     if (dish.picture_url && dish.picture_url.includes('localhost')) {
       const newUrl = dish.picture_url.replace(
         'http://localhost:34321',
-        'https://icqoczbcbzinlmjtaxkk.supabase.co'
+        'https://qcptobovhxpodjdeacoo.supabase.co'
       );
       
       console.log(`Updating dish ${dish.id}:`);
