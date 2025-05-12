@@ -16,7 +16,7 @@ const checkoutTranslations: Record<"en" | "pl", LemonsqueezyProductOptions> = {
     description: "Display QR menus to your clients.",
     name: "FeastQR Menu",
     receipt_button_text: "Go to FeastQR",
-    receipt_link_url: "https://www.feastqr.com/dashboard",
+    receipt_link_url: "https://ywww.feastqr.com/dashboard",
     receipt_thank_you_note: "Thank you for your purchase!",
     redirect_url: "https://www.feastqr.com/dashboard",
   },

@@ -1,6 +1,21 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the working
 # directory name when running `supabase init`.
-project_id = "qr-menu"
+
+project_id = "qcptobovhxpodjdeacoo"
+
+[auth.external.google]
+enabled = true
+client_id = "YOUR_GOOGLE_CLIENT_ID"
+secret = "YOUR_GOOGLE_CLIENT_SECRET"
+redirect_uri = "http://localhost:3000/dashboard"
+
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://localhost:3000"]
+enable_signup = true
+jwt_expiry = 3600
+
 
 [api]
 # Port to use for the API URL.

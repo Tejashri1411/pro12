@@ -24,7 +24,9 @@ const signInWithOauth = (provider: Provider) => {
     provider: provider,
     options: { redirectTo: `${window.location.origin}/dashboard` },
   });
-};
+}; 
+
+
 
 export function UserAuthForm() {
   const { t } = useTranslation();
@@ -82,9 +84,7 @@ export function UserAuthForm() {
       <button
         type="button"
         className={cn(buttonVariants({ variant: "outline" }), "flex gap-2")}
-        onClick={() => {
-          signInWithOauth("google");
-        }}
+        onClick={() => signInWithOauth("google")}
       >
         <Icons.google width={16} />
         Google
