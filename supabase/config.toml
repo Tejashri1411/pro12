@@ -7,8 +7,8 @@ project_id = "qcptobovhxpodjdeacoo"
 enabled = true
 client_id = "YOUR_GOOGLE_CLIENT_ID"
 secret = "YOUR_GOOGLE_CLIENT_SECRET"
-redirect_uri = "http://localhost:3000/dashboard"
-
+redirect_uri ="https://pro12-cyan.vercel.app/dashboard"
+# redirect_uri = "http://localhost:3000/dashboard"
 
 [auth]
 site_url = "http://localhost:3000"

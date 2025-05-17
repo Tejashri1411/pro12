@@ -141,23 +141,28 @@ export function BillingForm() {
               <button
                 // eslint-disable-next-line @typescript-eslint/no-misused-promises
                 onClick={async () => {
-                  if (isSubscribed) {
-                    openLemonSqueezy(subscriptionData?.updatePaymentUrl || "");
+                  try {
+                    if (isSubscribed) {
+                      openLemonSqueezy(subscriptionData?.updatePaymentUrl || "");
+                      return;
+                    }
 
-                    return;
-                  }
+                    const checkoutUrl = await mutateAsync({
+                      language: i18n.language as "en" | "pl",
+                    });
 
-                  const checkoutUrl = await mutateAsync({
-                    language: i18n.language as "en" | "pl",
-                  });
-
-                  if (checkoutUrl) {
-                    openLemonSqueezy(checkoutUrl);
-                  } else {
+                    if (checkoutUrl) {
+                      openLemonSqueezy(checkoutUrl);
+                    } else {
+                      throw new Error("Failed to generate checkout URL");
+                    }
+                  } catch (error) {
+                    console.error("Payment error:", error);
                     toast({
                       title: "Error",
                       description: t("notifications.somethingWentWrong"),
                       variant: "destructive",
+                      duration: 5000,
                     });
                   }
                 }}
