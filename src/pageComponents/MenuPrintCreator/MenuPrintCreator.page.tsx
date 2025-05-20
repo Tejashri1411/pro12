@@ -192,7 +192,7 @@ export const MenuPrintCreatorPage = ({
       </div>
       <MenuPdfGenerator
         {...debouncedValues}
-        qrCodeUrl={`www.feastqr.com/menu/${slug}`}
+        qrCodeUrl={`https://pro12-cyan.vercel.app/menu/${slug}`}
         menuLogoImageUrl={data?.logoImageUrl ?? null}
       />
     </div>
